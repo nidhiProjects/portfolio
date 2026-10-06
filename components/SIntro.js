@@ -29,7 +29,7 @@ const SIntro = () => {
           Nidhi Yadav
         </p>
         <p className="my-4 uppercase font-semibold text-primary">
-          React JS Developer
+          Frontend Developer
         </p>
         <p className="text-sm">Based in Faridabad, India</p>
       </div>
@@ -38,11 +38,12 @@ const SIntro = () => {
         <p
           className={`${heebo.className} uppercase text-2xl md:text-5xl text-dark py-4 text-left`}
         >
-          I am
+          I am{" "}
           <span className="font-extrabold text-primary">Nidhi Yadav</span>, A
           Frontend Developer Crafting high-performance, user-friendly web
           applications with{" "}
-          <span className="font-bold text-primary">React</span>.
+          <span className="font-bold text-primary">React</span> &amp;{" "}
+          <span className="font-bold text-primary">Next.js</span>.
         </p>
         <p className="flex items-center gap-2">
           <span className="h-4 w-4 bg-primary block rounded-full"></span>
@@ -60,13 +61,16 @@ const SIntro = () => {
         style={{ scrollMarginTop: "100px" }}
       >
         <div className="capitalize tracking-widest">
-          I'm a <b className="text-primary">Frontend Developer</b> with 2 years
-          of experience, specializing in
-          <b className="text-primary"> React</b>. With expertise in HTML, CSS,
-          and <b className="text-primary">JavaScript</b>, I craft
-          high-performance, user-centric web applications. Passionate about
-          <b className="text-primary"> clean code, optimization</b>, and
-          delivering seamless UI/UX experiences.
+          I&apos;m a <b className="text-primary">Frontend Developer</b> with 3
+          years of experience building responsive, scalable web applications
+          with <b className="text-primary">React.js</b>,{" "}
+          <b className="text-primary">Next.js</b>,{" "}
+          <b className="text-primary">TypeScript</b>, Redux Toolkit and
+          Tailwind CSS. I&apos;ve worked on enterprise applications, CMS
+          platforms, admin dashboards and government-facing portals, with a
+          strong focus on REST API integration, reusable components,
+          <b className="text-primary"> clean code, performance</b> and
+          seamless UI/UX.
         </div>
       </div>
     </section>

@@ -1,6 +1,86 @@
 import React from "react";
 import Image from "next/image";
 
+const PROJECTS = [
+  {
+    title: "GJEPC Blood Donation Campaign",
+    subtitle: "Government campaign platform for donor registration and pledges",
+    image: "/blood-donation.png",
+    alt: "GJEPC Blood Donation Campaign",
+    points: [
+      "Built a campaign platform for blood donation registration, pledge participation and video wishes using React.js.",
+      "Delivered a responsive user app and admin dashboard to manage participants, videos and campaign activity in real time.",
+      "Implemented role-based access control, status tracking and notifications for secure workflow management.",
+    ],
+  },
+  {
+    title: "GJEPC Jewel Pages",
+    subtitle: "Jewellery industry directory with admin and provider panels",
+    image: "/jewel-pages.png",
+    alt: "GJEPC Jewel Pages",
+    points: [
+      "Developed the complete frontend, admin panel and service provider panel for the platform.",
+      "Integrated TalkJS for customer support, inbox management and communication between users, providers and administrators.",
+      "Built responsive, scalable modules with secure data handling to improve workflow efficiency and engagement.",
+    ],
+  },
+  {
+    title: "AI PhotoBooth",
+    subtitle: "Themed AI portraits generated with face-swapping at events",
+    image: "/ai-photobooth.png",
+    alt: "AI PhotoBooth",
+    points: [
+      "Built an AI-powered photo booth that generates themed portraits using face-swapping technology.",
+      "Developed an automated image processing workflow for real-time photo generation and event sharing.",
+    ],
+  },
+  {
+    title: "DJXLABS CMS Website",
+    subtitle: "Template-driven CMS dashboard with SSR frontend",
+    image: "/djxlabs-cms.png",
+    alt: "DJXLABS CMS Website",
+    points: [
+      "Built a CMS dashboard with React, TypeScript, Tiptap and Firebase for content editing and website management.",
+      "Developed a Vike-based SSR frontend that renders dynamic, template-driven pages from dashboard content.",
+      "Implemented a dynamic website generation system converting static HTML/CSS/JS templates into reusable, database-driven pages.",
+    ],
+  },
+  {
+    title: "SSHEQ",
+    subtitle: "Safety, Security, Health, Environment & Quality platform",
+    image: "/Sheq.png",
+    alt: "SSHEQ Website",
+    fit: "object-contain",
+    points: [
+      "Developed risk assessment, training, stakeholder and contractor management modules using React.js.",
+      "Built health promotion modules to improve employee safety awareness and occupational health compliance.",
+      "Collaborated with a 4-member team to deliver scalable, reusable frontend components.",
+    ],
+  },
+  {
+    title: "Complaints Management System",
+    subtitle: "Complaint tracking and resolution dashboard for organizations",
+    image: "/forafera.webp",
+    alt: "Complaints Management System",
+    points: [
+      "Developed a system to log, track and resolve organizational complaints using React.js and Bootstrap.",
+      "Enabled Super Admins to assign multiple contractors/users, with role-based access control.",
+      "Integrated REST APIs with status tracking and notifications to streamline complaint workflows.",
+    ],
+  },
+  {
+    title: "B2X Ecommerce",
+    subtitle: "Ecommerce admin panel with analytics",
+    image: "/b2x-ecommerce.png",
+    alt: "B2X Ecommerce admin panel",
+    points: [
+      "Developed a responsive ecommerce admin panel using React.js, Bootstrap and Chart.js.",
+      "Integrated REST APIs for dynamic data management, order tracking and dispute resolution.",
+      "Improved store management with interactive dashboards and data visualization.",
+    ],
+  },
+];
+
 const SProjects = () => {
   return (
     <section
@@ -17,179 +97,35 @@ const SProjects = () => {
         passion for clean and efficient web development.
       </p>
       <div className="grid py-4 gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        <div className="border border-offWhite pb-4 rounded-b-xl shadow-md">
-          <div className="h-[150px] sm:h-[200px] md:h-[250px] w-full overflow-hidden relative">
-            <Image
-              src="/sheq.png"
-              alt="sheq Website"
-              fill
-              priority
-              className="h-full w-full object-contain hover:scale-105 transition-all duration-500"
-            />
+        {PROJECTS.map((project) => (
+          <div
+            key={project.title}
+            className="border border-offWhite pb-4 rounded-b-xl shadow-md"
+          >
+            <div className="h-[150px] sm:h-[200px] md:h-[250px] w-full overflow-hidden relative">
+              <Image
+                src={project.image}
+                alt={project.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className={`h-full w-full ${project.fit ?? "object-cover"} hover:scale-105 transition-all duration-500`}
+              />
+            </div>
+            <div className="px-4 py-2">
+              <h3 className="text-black font-bold uppercase text-2xl mb-2">
+                {project.title}
+              </h3>
+              <p className="text-sm mb-2">{project.subtitle}</p>
+              <ul className="list-disc list-inside gap-4 flex flex-col">
+                {project.points.map((point) => (
+                  <li key={point} className="text-xs">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="px-4 py-2">
-            <h3 className="text-black font-bold uppercase text-2xl mb-2">
-              Harmony and Help
-            </h3>
-            <p className="text-sm mb-2">Workplace Safety & Compliance Management Platform</p>
-            <ul className="list-disc list-inside gap-4 flex flex-col">
-              <li className="text-xs">
-              Created a full-featured complaint logging and resolution platform using React.js and Bootstrap for responsive design.
-              </li>
-              <li className="text-xs">
-              Designed contractor and stakeholder management modules to streamline training schedules and task delegation.
-              </li>
-              <li className="text-xs">
-              Integrated health promotion and awareness program tracking features aligned with occupational health standards.
-              </li>
-              <li className="text-xs">
-              Implemented user-friendly UI using Bootstrap and Tailwind CSS to ensure clarity and responsiveness across devices.
-              </li>
-              <li className="text-xs">
-              Enhanced workplace safety monitoring by incorporating training logs, documentation support, and scalable architecture.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="border border-offWhite pb-4 rounded-b-xl shadow-md">
-          <div className="h-[150px] sm:h-[200px] md:h-[250px] w-full overflow-hidden relative">
-            <Image
-              src="/forafera.webp"
-              alt="Forafera Website"
-              fill
-              priority
-              className="h-full w-full object-cover hover:scale-105 transition-all duration-500"
-            />
-          </div>
-          <div className="px-4 py-2">
-            <h3 className="text-black font-bold uppercase text-2xl mb-2">
-              CMS
-            </h3>
-            <p className="text-sm mb-2">
-            Complaint Tracking & Resolution Dashboard for Organizations
-            </p>
-            <ul className="list-disc list-inside gap-4 flex flex-col">
-              <li className="text-xs">
-              Created a full-featured complaint logging and resolution platform using React.js and Bootstrap for responsive design.
-              </li>
-              <li className="text-xs">
-              Enabled role-based access control for Admins, Contractors, and Users with dynamic dashboard views and functionalities.
-              </li>
-              <li className="text-xs">
-              Integrated APIs for real-time status updates, user notifications, and seamless complaint assignment workflows.
-              </li>
-              <li className="text-xs">
-              Implemented complaint tracking with lifecycle management—from submission to resolution—for operational efficiency.
-              </li>
-              <li className="text-xs">
-              Streamlined complaint resolution by allowing Super Admins to assign multiple users/contractors to tasks concurrently.
-              </li>
-            </ul>
-          </div>
-        </div>
-      
-        <div className="border border-offWhite pb-4 rounded-b-xl shadow-md">
-          <div className="h-[150px] sm:h-[200px] md:h-[250px] w-full overflow-hidden relative">
-            <Image
-              src="/Jambeera.png"
-              alt="Jambeera Website"
-              fill
-              priority
-              className="h-full w-full object-contain hover:scale-105 transition-all duration-500"
-            />
-          </div>
-          <div className="px-4 py-2">
-            <h3 className="text-black font-bold uppercase text-2xl mb-2">
-              JAMBEERA
-            </h3>
-            <p className="text-sm mb-2">All-in-One Service Marketplace for Seekers & Providers</p>
-            <ul className="list-disc list-inside gap-4 flex flex-col">
-              <li className="text-xs">
-              Built a dynamic platform that connects service seekers and providers across various fields like IT, education, home services, and more.
-              </li>
-              <li className="text-xs">
-              Designed with a modular React.js architecture to allow scalable onboarding of providers and seamless user navigation.
-              </li>
-              <li className="text-xs">
-              Integrated user profiles, service listings, search filters, and booking functionality for a complete service marketplace experience.
-              </li>
-              <li className="text-xs">
-              Implemented role-based access for seekers and providers, enabling personalized dashboards and communication channels.
-              </li>
-              <li className="text-xs">
-              Enabled real-time service request tracking, status updates, and secure messaging to improve user engagement and trust.
-              </li>
-            </ul>
-          </div>
-        </div>
-   
-        <div className="border border-offWhite pb-4 rounded-b-xl shadow-md">
-          <div className="h-[150px] sm:h-[200px] md:h-[250px] w-full overflow-hidden relative">
-            <Image
-              src="/chat.png"
-              alt="chat Website"
-              fill
-              priority
-              className="h-full w-full object-cover hover:scale-105 transition-all duration-500"
-            />
-          </div>
-          <div className="px-4 py-2">
-            <h3 className="text-black font-bold uppercase text-2xl mb-2">
-              Chat App
-            </h3>
-            <p className="text-sm mb-2">Instant Messaging Platform Built with React & Socket.IO</p>
-            <ul className="list-disc list-inside gap-4 flex flex-col">
-              <li className="text-xs">
-              Developed a real-time chat application using React.js on the frontend and Socket.IO.
-              </li>
-              <li className="text-xs">
-              Integrated user authentication with secure login/signup functionality, using tools like JWT or sessions for protected routes.
-              </li>
-              <li className="text-xs">
-              Enabled one-on-one chat with real-time message delivery, typing indicators, and user presence detection.
-              </li>
-              <li className="text-xs">Designed a responsive, modern UI with Tailwind CSS, optimized for both desktop and mobile use.
-              </li>
-              <li className="text-xs">
-              Implemented chat history persistence using local storage or a backend database (e.g., MongoDB), ensuring a seamless user experience.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="border border-offWhite pb-4 rounded-b-xl shadow-md">
-          <div className="h-[150px] sm:h-[200px] md:h-[250px] w-full overflow-hidden relative">
-            <Image
-              src="/crm.webp"
-              alt="CRM Website"
-              fill
-              priority
-              className="h-full w-full object-cover hover:scale-105 transition-all duration-500"
-            />
-          </div>
-          <div className="px-4 py-2">
-            <h3 className="text-black font-bold uppercase text-2xl mb-2">
-              Task Manager
-            </h3>
-            <p className="text-sm mb-2">Personal Productivity and Task Management Web App</p>
-            <ul className="list-disc list-inside gap-4 flex flex-col">
-              <li className="text-xs">
-              Developed a task and list management system using React with local storage for fast and persistent data handling.
-              </li>
-              <li className="text-xs">
-              Built full CRUD functionalities for tasks/lists, along with protected routing and user authentication (signup/login).
-              </li>
-              <li className="text-xs">
-              Designed a clean and responsive interface optimized for mobile and desktop using Tailwind CSS and Bootstrap.
-              </li>
-              <li className="text-xs">
-              Incorporated session and error management for a seamless and secure user experience.
-              </li>
-              <li className="text-xs">
-              Improved productivity with rapid task loading (2 seconds), ensuring a smooth, snappy experience for end-users.
-              </li>
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
