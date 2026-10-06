@@ -64,9 +64,8 @@ const SIntro = () => {
           I&apos;m a <b className="text-primary">Frontend Developer</b> with 3
           years of experience building responsive, scalable web applications
           with <b className="text-primary">React.js</b>,{" "}
-          <b className="text-primary">Next.js</b>,{" "}
-          <b className="text-primary">TypeScript</b>, Redux Toolkit and
-          Tailwind CSS. I&apos;ve worked on enterprise applications, CMS
+          <b className="text-primary">Next.js</b>, Redux Toolkit and Tailwind
+          CSS. I&apos;ve worked on enterprise applications, CMS
           platforms, admin dashboards and government-facing portals, with a
           strong focus on REST API integration, reusable components,
           <b className="text-primary"> clean code, performance</b> and

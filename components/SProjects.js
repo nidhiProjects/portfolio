@@ -40,7 +40,7 @@ const PROJECTS = [
     image: "/djxlabs-cms.png",
     alt: "DJXLABS CMS Website",
     points: [
-      "Built a CMS dashboard with React, TypeScript, Tiptap and Firebase for content editing and website management.",
+      "Built a CMS dashboard with React, Tiptap and Firebase for content editing and website management.",
       "Developed a Vike-based SSR frontend that renders dynamic, template-driven pages from dashboard content.",
       "Implemented a dynamic website generation system converting static HTML/CSS/JS templates into reusable, database-driven pages.",
     ],

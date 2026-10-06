@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 
 export const metadata = {
   title: "Nidhi Portfolio",
-  description: "Nidhi Yadav | Portfolio | React JS | Next JS | JavaScript | Typescript | Redux | Tailwind CSS",
+  description: "Nidhi Yadav | Portfolio | React JS | Next JS | JavaScript | Redux | Tailwind CSS",
 };
 
 export default function RootLayout({ children }) {

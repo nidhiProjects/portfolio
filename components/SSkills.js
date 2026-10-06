@@ -12,7 +12,6 @@ import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiMui,
   SiPostman,
-  SiTypescript,
   SiRedux,
   SiFirebase,
 } from "react-icons/si";
@@ -46,12 +45,6 @@ const SSkills = () => {
             <FaJs className="mx-auto" size={100} />
           </div>
           <p className="text-dark font-bold text-2xl">JavaScript</p>
-        </div>
-        <div className="border border-offWhite p-4 rounded-xl text-center">
-          <div className="text-blue-600">
-            <SiTypescript className="mx-auto" size={100} />
-          </div>
-          <p className="text-dark font-bold text-2xl">TypeScript</p>
         </div>
         <div className="border border-offWhite p-4 rounded-xl text-center">
           <div className="text-purple-600">
